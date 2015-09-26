@@ -74,10 +74,10 @@ var club_name = "Fight Club";
  *   unknown => undefined
  */
 var gender = {
-    female : "female",
-    male : "male",
-    unknown : undefined
-}
+  female : "female",
+  male : "male",
+  unknown : undefined
+};
 
 /* Step 10
  *
@@ -91,7 +91,12 @@ var gender = {
  *   gender  => gender.female
  *
  */
-
+var princess_leia = {
+  name : "Leia Organa",
+  money : 890,
+  age : 20,
+  gender : gender.female
+};
 
 /* Step 11
  *
