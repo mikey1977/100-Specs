@@ -472,7 +472,20 @@ Person.prototype.earnMoney = function(amount) {
  * @return {String}
  *
  */
+function purchaseLaptop(laptop) {
+  if (laptopCosts.hasOwnProperty(laptop)) {
+    return laptopCosts[laptop].toString();
+  } else {
+    return -1;
+  }
+}
 
+// var laptopCosts = {
+//   MacBook : 1500,
+//   Alienware : 2500,
+//   HP : 499,
+//   Surface : 320
+// };
 
 /* Step 29
  *
