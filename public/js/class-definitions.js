@@ -498,8 +498,15 @@ function purchaseLaptop(laptop) {
  * @return {Bool}
  *
  */
+function canTalkAbout(club) {
+  if (club_name === club) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
-
+// var club_name = "Fight Club";
 /* Step 30
  *
  * Define a class named "Pen" with a property for
