@@ -358,8 +358,22 @@ function drink(beerType) {
  * @return {String if true else return false}
  *
  */
+function browseURL(browserName) {
+  if (browsers.hasOwnProperty(browserName)) {
+    return browsers[browserName];
+  } else {
+    return false;
+  }
+}
 
-
+// var browsers = {
+//   Chromium : 'google.com',
+//   Safari : 'apple.com',
+//   Opera : 'opera.com',
+//   Firefox : 'mozilla.org',
+//   Sleipnir : 'fenrir-inc.com',
+//   Konqueror : 'konqueror.org'
+// };
 /* Step 25
  *
  * Define a function named "listLivingOrgClass" that
