@@ -383,7 +383,15 @@ function browseURL(browserName) {
  * @return {String}
  *
  */
+function listLivingOrgClass() {
+  var url = '<ul>';
+  for (var i = 0; i < livingOrganismClassification.length; i++) {
+    url += '<li>' + (livingOrganismClassification[i]) + '</li>';
+  }
+  return url + '</ul>';
+}
 
+// var livingOrganismClassification = ['Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Species'];
 
 /* Step 26
  *
