@@ -412,7 +412,17 @@ function listLivingOrgClass() {
  * @return {String}
  *
  */
+function favoritePlanet(currentPlanet) {
+  if (planets.indexOf(currentPlanet) === -1) {
+    return currentPlanet + ' is not a planet!';
+  } else {
+    for (var i = 0; i < planets.length; i++) {
+      return 'I\'m from ' + currentPlanet + ', but I wish I could go to ' + (planets[i]);
+    }
+  }
+}
 
+// var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
 
 /* Step 27
  *
