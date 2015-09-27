@@ -1152,8 +1152,8 @@ var chocolateChip = new Cookie('chocolate');
 var gingerbread = new Cookie('gingerbread');
 
 // Create 2 different meals
-var breakfast = new Meal('cereal and milk');
-var dinner = new Meal('fish and vegetables');
+var breakfast = new Meal(['cereal', 'milk']);
+var dinner = new Meal(['fish', 'vegetables']);
 
  /* Steps 81 to 90
  *
@@ -1369,7 +1369,16 @@ Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek) {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
+Meal.prototype.containsJunkFood = function() {
+  var junkFood = ['chips', 'soda', 'ice cream', 'popcorn', 'candy'];
+  for (var i = 0; i < junkFood.length; i++) {
+    if (this.foods.indexOf(junkFood[i]) > -1) {
+      return true;
 
+    }
+  }
+  return false;
+};
 
  /* Steps 91 to 100
  *
@@ -1384,7 +1393,8 @@ Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek) {
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
+var warmBloodedAnimal = new Animal('Monkey', 'male')
+warmBloodedAnimal.isWarmBlooded();
 var coldBloodedAnimal;
 var notWarmOrColdAnimal;
 
