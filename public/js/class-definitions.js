@@ -1415,8 +1415,8 @@ var forwardDriving = forte.drive();
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+var decagon = square.getType();
+var polygon = hexagon.getType();
 
 
 /* Step 94
