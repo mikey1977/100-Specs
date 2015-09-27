@@ -1292,6 +1292,7 @@ Door.prototype.openClose = function() {
     this.isOpen = true;
     return true;
   } else {
+  // (this.isOpen === true) {
     this.isOpen = false;
     return false;
   }
@@ -1440,8 +1441,10 @@ var closeAnOpenBox = openy.openBox();
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor;
-var closeAnOpenDoor;
+var ajar = new Door(false);
+var openAClosedDoor = ajar.openClose();
+var closeDoor = new Door(true);
+var closeAnOpenDoor = closeDoor.openClose();
 
 
 /* Step 96
@@ -1450,8 +1453,8 @@ var closeAnOpenDoor;
  * and assign the values to each variable below.
  *
  */
-var redShoesSize7;
-var blackShoesSize10;
+var redShoesSize7 = rubySlippers.findShoes();
+var blackShoesSize10 = dressShoes.findShoes();
 
 
  /* Step 97
