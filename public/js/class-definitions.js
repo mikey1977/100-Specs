@@ -1027,7 +1027,9 @@ function Vehicle(make, model) {
  */
 function Shape(sides) {
   this.sides = sides;
-  if (!(this.sides > 3)) {
+  if (this.sides >= 3) {
+    return this.sides;
+  } else {
     this.sides = null;
   }
 }
@@ -1202,7 +1204,8 @@ Vehicle.prototype.drive = function(streetName) {
     return 'Driving on ' + streetName;
   }
 
-}
+};
+
 //   if ((streetName !== '') && (typeof streetName === String)) {
 //     return 'Driving on ' + streetName;
 //   } else {
@@ -1211,6 +1214,7 @@ Vehicle.prototype.drive = function(streetName) {
 // };
 
 civic.drive('Manoa');
+
  /* Step 83
  *
  * Declare a Shape method called getType that returns a string
@@ -1229,8 +1233,34 @@ civic.drive('Manoa');
  *
  */
 Shape.prototype.getType = function() {
-
-}
+  if (this.sides === 3) {
+    return 'triangle';
+  }
+  if (this.sides === 4) {
+    return 'quadrilateral';
+  }
+  if (this.sides === 5) {
+    return 'pentagon';
+  }
+  if (this.sides === 6) {
+    return 'hexagon';
+  }
+  if (this.sides === 7) {
+    return 'heptagon';
+  }
+  if (this.sides === 8) {
+    return 'octagon';
+  }
+  if (this.sides === 9) {
+    return 'nonagon';
+  }
+  if (this.sides === 10) {
+    return 'decagon';
+  }
+  if (this.sides > 10) {
+    return 'Could not determine type';
+  }
+};
 
 /* Step 84
  *
@@ -1240,7 +1270,14 @@ Shape.prototype.getType = function() {
  * Return true if openBox opens the box, false otherwise.
  *
  */
-
+Box.prototype.openBox = function() {
+  if (this.isOpen === false) {
+    this.isOpen = true;
+    return true;
+  } else {
+    return false;
+  }
+};
 
  /* Step 85
  *
