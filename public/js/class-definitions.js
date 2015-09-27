@@ -1213,7 +1213,7 @@ Vehicle.prototype.drive = function(streetName) {
 //   }
 // };
 
-civic.drive('Manoa');
+// civic.drive('Manoa');
 
  /* Step 83
  *
@@ -1405,8 +1405,8 @@ var notWarmOrColdAnimal = sam.isWarmBlooded();
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = civic.drive('manoa');
+var forwardDriving = forte.drive();
 
 
  /* Step 93
