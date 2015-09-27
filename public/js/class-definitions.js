@@ -1026,8 +1026,8 @@ function Vehicle(make, model) {
  *
  */
 function Shape(sides) {
-  this.sides = null;
-  if (sides < 3) {
+  this.sides = sides;
+  if (!(this.sides > 3)) {
     this.sides = null;
   }
 }
@@ -1118,11 +1118,11 @@ var nemo = new Animal('Fish', 'male');
 
 // Create 2 different vehicles
 var civic = new Vehicle('Honda', 'Civic');
-var forte = new Vehicle('Kia', 'Forte');
+var forte = new Vehicle('KIA', 'Forte');
 
 // Create 2 shapes with different numbers of sides
-var square;
-var hexagon;
+var square = new Shape(4);
+var hexagon = new Shape(6);
 
 // Create 2 boxes
 var catBox;
