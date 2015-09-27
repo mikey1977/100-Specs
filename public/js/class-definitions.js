@@ -741,8 +741,57 @@ Stapler.prototype.staplePapers = function(numberOfPapers) {
  *   addDiscovery
  *
  */
+function Scientist(name, money, age, gender, disciplines, discoveries) {
+  this.disciplines = [];
+  this.discoveries = [];
+  Person.call(this, name, money, age, gender);
+}
+Scientist.prototype = Object.create(Person.prototype, {
+  constructor : {
+    value : Scientist
+  }
+});
+
+// var nerd = new Scientist(name, money, age, gender, disciplines, discoveries);
+
+Scientist.prototype.addDiscipline = function(newDiscipline) {
+  this.disciplines.push(newDiscipline);
+  return newDiscipline;
+};
+
+Scientist.prototype.checkDiscipline = function(oldDiscipline) {
+  if ((this.disciplines.indexOf(oldDiscipline) == -1 )) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
+Scientist.prototype.addDiscovery = function(newDiscovery) {
+  this.discoveries.push(newDiscovery);
+  for (var i = 0; i < this.discoveries.length; i++) {
+    if (this.discoveries.length === 1) {
+      return 'I discovered ' + newDiscovery + '.';
+    }
+    if (this.discoveries.length === 2) {
+      return 'I discovered ' + this.discoveries[i] + ' and ' + this.discoveries[i + 1] + '.';
+    }
+    if (this.discoveries.length === 3) {
+      return 'I discovered ' + this.discoveries[i] + ', ' + this.discoveries[i + 1] + ', and ' + this.discoveries[i + 2] + '.';
+    }
+  }
+};
 
 
+ // * examples:
+ // * ["Gravity"] will be returned as:
+ // * "I discovered Gravity."
+ // *
+ // * ["Gravity", "Theory of Relativity"] will be returned as:
+ // * "I discovered Gravity and Theory of Relativity."
+ // *
+ // * ["Gravity", "Theory of Relativity", "Jesus Christ"] will be returned as:
+ // *       "I discovered Gravity, Theory of Relativity, and Jesus Christ."
 /* Step 36
  *
  * Define a class named "BankAccount" that has properties
