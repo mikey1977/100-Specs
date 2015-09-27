@@ -1050,7 +1050,9 @@ function Box(contents, isOpen) {
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
-
+function Door(isOpen) {
+  this.isOpen = false;
+}
 
 /**
  * Step 55
