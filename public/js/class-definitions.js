@@ -1129,7 +1129,8 @@ var hexagon = new Shape(6);
 // Create 2 boxes
 var bitey = new Animal('Cat', 'male');
 var catBox = new Box(bitey, true);
-var christmasPresent = new Box('present', false);
+
+var christmasPresent = new Box('content', false);
 
 // Create 2 doors
 var automaticDoor = new Door(true);
@@ -1427,8 +1428,10 @@ var polygon = newerShape.getType();
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox = christmasPresent.openBox();
-var closeAnOpenBox = catBox.openBox();
+var boxy = new Box('stuff', false);
+var openAClosedBox = boxy.openBox();
+var openy = new Box('stuff', true);
+var closeAnOpenBox = openy.openBox();
 
 
  /* Step 95
