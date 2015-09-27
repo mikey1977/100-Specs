@@ -1025,7 +1025,12 @@ function Vehicle(make, model) {
  * value of the sides property to null.
  *
  */
-
+function Shape(sides) {
+  this.sides = null;
+  if (sides < 3) {
+    this.sides = null;
+  }
+}
 
 /**
  * Step 53
