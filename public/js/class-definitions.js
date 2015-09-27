@@ -604,6 +604,8 @@ SolarSystem.prototype.removePlanet = function() {
   this.planets.pop(planets);
 }
 
+
+
 /* Step 33
  *
  * Define a class named "PrincessLeia" that is a subclass of "Person"
@@ -636,8 +638,42 @@ SolarSystem.prototype.removePlanet = function() {
  *   marries
  *
  */
+function PrincessLeia(name, money, age, gender, isInTrouble) {
+  this.isInTrouble = null;
+  Person.call(this, name, money, age, gender);
+}
+PrincessLeia.prototype = Object.create(Person.prototype, {
+  constructor : {
+    value : PrincessLeia
+  }
+});
 
+PrincessLeia.prototype.shootsGun = function() {
+  this.isInTrouble = false;
+  return 'Leia shoots her gun wildly';
+};
+PrincessLeia.prototype.getsInTrouble = function() {
+  this.isInTrouble = true;
+  return 'Help me Obi-wan Kenobi, you\'re my only hope';
+};
+PrincessLeia.prototype.marries = function(loveInterest) {
+  if (loveInterest === 'Han Solo') {
+    return true;
+  }
+  if (loveInterest === 'Luke Skywalker') {
+    return 'Gross!';
+  }
+  if (loveInterest !== 'Han Solor') {
+    return false;
+  }
+};
 
+// function Person(name, money, age, gender) {
+//   this.name = name;
+//   this.money = money;
+//   this.age = age;
+//   this.gender = gender;
+// }
 /* Step 34
  *
  * Define a class named "Stapler" with properties "color"
