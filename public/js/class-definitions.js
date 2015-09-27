@@ -1415,8 +1415,10 @@ var forwardDriving = forte.drive();
  * and assign the values to each variable below.
  *
  */
-var decagon = square.getType();
-var polygon = hexagon.getType();
+var newShape = new Shape(10);
+var newerShape = new Shape(11);
+var decagon = newShape.getType();
+var polygon = newerShape.getType();
 
 
 /* Step 94
@@ -1425,8 +1427,8 @@ var polygon = hexagon.getType();
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+var openAClosedBox = christmasPresent.openBox();
+var closeAnOpenBox = catBox.openBox();
 
 
  /* Step 95
