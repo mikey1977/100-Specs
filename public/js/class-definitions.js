@@ -1114,11 +1114,11 @@ function Meal(foods) {
 
 // Create 2 different species of animals
 var george = new Animal('Monkey', 'male');
-var nemo = new Animal('Fish', 'male')
+var nemo = new Animal('Fish', 'male');
 
 // Create 2 different vehicles
-var civic;
-var forte;
+var civic = new Vehicle('Honda', 'Civic');
+var forte = new Vehicle('Kia', 'Forte');
 
 // Create 2 shapes with different numbers of sides
 var square;
