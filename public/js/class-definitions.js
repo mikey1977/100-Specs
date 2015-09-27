@@ -1195,8 +1195,22 @@ Animal.prototype.isWarmBlooded = function() {
  * return "Driving on {streetName}", else return "Driving forward".
  *
  */
+Vehicle.prototype.drive = function(streetName) {
+  if (streetName === '' || typeof streetName !== 'string') {
+    return 'Driving forward';
+  } else {
+    return 'Driving on ' + streetName;
+  }
 
+}
+//   if ((streetName !== '') && (typeof streetName === String)) {
+//     return 'Driving on ' + streetName;
+//   } else {
+//     return 'Driving forward';
+//   }
+// };
 
+civic.drive('Manoa');
  /* Step 83
  *
  * Declare a Shape method called getType that returns a string
@@ -1214,7 +1228,9 @@ Animal.prototype.isWarmBlooded = function() {
  * Any other number => "Could not determine type"
  *
  */
+Shape.prototype.getType = function() {
 
+}
 
 /* Step 84
  *
