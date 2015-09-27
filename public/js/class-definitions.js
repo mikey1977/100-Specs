@@ -1041,7 +1041,7 @@ function Shape(sides) {
  */
 function Box(contents, isOpen) {
   this.contents = contents;
-  this.isOpen = false;
+  this.isOpen = isOpen;
 }
 
 /**
@@ -1125,8 +1125,9 @@ var square = new Shape(4);
 var hexagon = new Shape(6);
 
 // Create 2 boxes
-var catBox;
-var christmasPresent;
+var bitey = new Animal('Cat', 'male');
+var catBox = new Box(bitey, true);
+var christmasPresent = new Box('present', false);
 
 // Create 2 doors
 var automaticDoor;
